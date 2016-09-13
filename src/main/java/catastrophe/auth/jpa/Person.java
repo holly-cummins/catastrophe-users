@@ -5,8 +5,6 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import catastrophe.auth.User;
-
 /**
  * Entity implementation class for Entity: User
  * 
