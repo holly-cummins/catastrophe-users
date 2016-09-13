@@ -37,7 +37,6 @@ configurations {
 // In this section you declare the dependencies for your production and test code
 dependencies {
 
-       compile project(":catastrophe-interfaces")
        // We assume this has been built locally and is in a maven cache 
        providedCompile 'liberty-consul:consul.api:1.0.0'
        providedCompile group:'javax.servlet', name:'javax.servlet-api', version:'3.1.0'
