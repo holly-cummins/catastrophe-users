@@ -1,0 +1,8 @@
+build/
+.gradle/
+.settings/
+.project
+.classpath
+/bin/
+
+.bluemix/pipeline.yml

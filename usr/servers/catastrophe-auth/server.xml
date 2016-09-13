@@ -1,0 +1,21 @@
+<server>
+<include optional="true" location="jpa.xml"/>
+
+    <featureManager>
+        <feature>cdi-1.2</feature>
+        <feature>jndi-1.0</feature>
+        <feature>jpa-2.1</feature>
+        <feature>jaxrs-2.0</feature>
+        <feature>jsonp-1.0</feature>
+        <feature>usr:consulDiscovery</feature>
+    </featureManager>
+    <application name='catastrophe-auth' location='catastrophe-auth.war' type='war' context-root='/'/>
+    <httpEndpoint id='defaultHttpEndpoint' host='*' httpPort='8085'/>
+    <httpDispatcher enableWelcomePage='false'/>
+    <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
+    <config updateTrigger='mbean'/>
+
+    <consul.annotation.scanner server="catastrophe-consul.mybluemix.net" port="80"/>
+
+</server>
+
