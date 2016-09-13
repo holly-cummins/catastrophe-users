@@ -9,7 +9,7 @@
         <feature>jsonp-1.0</feature>
         <feature>usr:consulDiscovery</feature>
     </featureManager>
-    <application name='catastrophe-auth' location='catastrophe-auth.war' type='war' context-root='/'/>
+    <application name='catastrophe-users' location='catastrophe-users.war' type='war' context-root='/'/>
     <httpEndpoint id='defaultHttpEndpoint' host='*' httpPort='8085'/>
     <httpDispatcher enableWelcomePage='false'/>
     <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>

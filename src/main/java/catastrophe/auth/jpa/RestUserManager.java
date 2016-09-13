@@ -3,10 +3,14 @@ package catastrophe.auth.jpa;
 import java.util.List;
 
 import javax.inject.Inject;
-import javax.ws.rs.*;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-@Path("auth")
+@Path("users")
 public class RestUserManager {
 
 	// The web says we can inject other CDI things but not a JPA
@@ -35,8 +39,7 @@ public class RestUserManager {
 	@Path("updateScore")
 	@Produces(MediaType.APPLICATION_JSON)
 	@POST
-	public void updateScore(@QueryParam("userName") String userName,
-			@QueryParam("score") int score) {
+	public void updateScore(@QueryParam("userName") String userName, @QueryParam("score") int score) {
 		System.out.println("Auth service updating " + userName + " with score " + score + ".");
 		userManager.updateScore(userName, score);
 	}
