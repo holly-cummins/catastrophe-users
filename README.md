@@ -25,6 +25,10 @@ To set up Eclipse projects, run
 
 ### Running the server locally (from the command line) 
 
+Copy `usr/servers/catastrophe-users/local-config/jpa.xml` to `usr/servers/catastrophe-users/`. This sets up 
+configuration for an in-memory Derby datasource, which isn't required in 
+Bluemix. 
+
 Run
 
     gradle runServer
@@ -33,12 +37,19 @@ The application should be available on http://localhost:9080.
 
 ### Deploying to a single board computer 
 
+Copy `usr/servers/catastrophe-users/local-config/jpa.xml` to `usr/servers/catastrophe-users/`. This sets up 
+configuration for an in-memory Derby datasource, which isn't required in 
+Bluemix. 
+
 To create a zip with the application and all dependencies (including the server), run 
 
     gradle packageServer
 
 
 ### Deploying to Bluemix 
+
+
+If you used the deploy to Bluemix button, a pipeline will have been set up which automatically deploys to Bluemix. 
 
 To create a war, run `gradle` from the catastrophe-scoring folder.
 
