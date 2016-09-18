@@ -16,6 +16,10 @@ This application is designed to run on a [raspberry pi](http://www.linksprite.co
 
 ## Getting started 
 
+Press this button to get your own copy of the sample running in Bluemix. 
+
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/holly-cummins/catastrophe-scoring)
+
 ### Eclipse integration 
 
 To set up Eclipse projects, run 

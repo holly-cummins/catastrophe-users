@@ -5,6 +5,4 @@ build/
 .classpath
 /bin/
 
-.bluemix/pipeline.yml
-
 usr/servers/catastrophe-users/jpa.xml
