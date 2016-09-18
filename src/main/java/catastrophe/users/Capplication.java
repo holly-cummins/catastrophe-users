@@ -1,4 +1,4 @@
-package catastrophe.auth;
+package catastrophe.users;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

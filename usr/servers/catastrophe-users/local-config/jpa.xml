@@ -4,7 +4,7 @@
 	<dataSource id="ds" jdbcDriverRef="derby.driver" jndiName="jdbc/datasource"
 		transactional="true">
 		<properties.derby.embedded createDatabase="create"
-			databaseName="memory:catastrophe.auth.database" />
+			databaseName="memory:catastrophe.users.database" />
 	</dataSource>
 
 	<jdbcDriver id="derby.driver">

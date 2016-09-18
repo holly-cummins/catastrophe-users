@@ -1,4 +1,4 @@
-package catastrophe.auth.jpa;
+package catastrophe.users.jpa;
 
 public class User {
 	int score;

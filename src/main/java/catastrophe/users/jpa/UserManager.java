@@ -1,4 +1,4 @@
-package catastrophe.auth.jpa;
+package catastrophe.users.jpa;
 
 import java.util.List;
 
