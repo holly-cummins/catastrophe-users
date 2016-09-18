@@ -40,7 +40,7 @@ public class RestUserManager {
 	@Produces(MediaType.APPLICATION_JSON)
 	@POST
 	public void updateScore(@QueryParam("userName") String userName, @QueryParam("score") int score) {
-		System.out.println("Auth service updating " + userName + " with score " + score + ".");
+		System.out.println("User service updating " + userName + " with score " + score + ".");
 		userManager.updateScore(userName, score);
 	}
 
