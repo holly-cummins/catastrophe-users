@@ -6,6 +6,7 @@ http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/persistence_2
 		transaction-type="JTA">
 		<jta-data-source>jdbc/datasource</jta-data-source>
 		<class>catastrophe.users.jpa.Person</class>
+		<class>catastrophe.users.jpa.Artwork</class>
 
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>

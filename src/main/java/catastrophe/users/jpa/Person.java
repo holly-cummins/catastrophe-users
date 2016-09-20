@@ -3,22 +3,24 @@ package catastrophe.users.jpa;
 import java.io.Serializable;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  * Entity implementation class for Entity: User
  * 
  */
 @Entity
-public class Person extends User implements Serializable {
+public class Person implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
 	private String name;
 	private int score;
-	// @ElementCollection
-	// private Set<String> images;
+	@OneToMany(cascade = CascadeType.ALL)
+	private Set<Artwork> images;
 
 	public Person() {
 		super();
@@ -29,32 +31,27 @@ public class Person extends User implements Serializable {
 		this.name = string;
 	}
 
-	@Override
 	public int getScore() {
 		return score;
 	}
 
-	@Override
 	public void setScore(int score) {
 		this.score = score;
 	}
 
-	@Override
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	@Override
 	public String getName() {
 		return name;
 	}
 
-	public Set<String> getImages() {
-		// return images;
-		return null;
+	public Set<Artwork> getImages() {
+		return images;
 	}
 
-	public void setImages(Set<String> images) {
-		// this.images = images;
+	public void setImages(Set<Artwork> images) {
+		this.images = images;
 	}
 }

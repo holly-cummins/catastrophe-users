@@ -53,13 +53,8 @@ public class UserManager {
 		return users;
 	}
 
-	public List<Person> findByName(String filter) {
-		if (filter == null || filter.isEmpty()) {
-			return findAll();
-		}
-		filter = filter.toLowerCase();
-		return getEm().createNamedQuery("User.findByName", Person.class).setParameter("filter", filter + "%")
-				.getResultList();
+	public Person findByName(String name) {
+		return getEm().find(Person.class, name);
 	}
 
 	public void clearAll() {
@@ -85,14 +80,13 @@ public class UserManager {
 			}
 
 			person.setScore(person.getScore() + score);
-			Set<String> images = person.getImages();
+
+			Set<Artwork> images = person.getImages();
 			if (images == null) {
 				images = new HashSet<>();
 			}
-			images.add(image);
+			images.add(new Artwork(person, image));
 			person.setImages(images);
-			System.out.println("Added " + image);
-			System.out.println("length now " + images.size());
 			try {
 				utx.begin();
 				em.merge(person);
