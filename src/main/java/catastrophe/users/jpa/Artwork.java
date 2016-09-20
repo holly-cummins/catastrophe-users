@@ -22,6 +22,10 @@ public class Artwork implements Serializable {
 	@Lob
 	private String data;
 
+	public Artwork() {
+
+	}
+
 	public Artwork(Person user, String string) {
 		this.data = string;
 	}
