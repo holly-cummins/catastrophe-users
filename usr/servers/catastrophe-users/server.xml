@@ -2,6 +2,7 @@
 <include optional="true" location="jpa.xml"/>
 
     <featureManager>
+        <feature>localConnector-1.0</feature>
         <feature>cdi-1.2</feature>
         <feature>jndi-1.0</feature>
         <feature>jpa-2.1</feature>
