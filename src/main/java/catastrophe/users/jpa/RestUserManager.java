@@ -39,9 +39,10 @@ public class RestUserManager {
 	@Path("updateScore")
 	@Produces(MediaType.APPLICATION_JSON)
 	@POST
-	public void updateScore(@QueryParam("userName") String userName, @QueryParam("score") int score) {
+	public void updateScore(@QueryParam("userName") String userName, @QueryParam("score") int score,
+			@QueryParam("image") String base64Image) {
 		System.out.println("User service updating " + userName + " with score " + score + ".");
-		userManager.updateScore(userName, score);
+		userManager.updateScore(userName, score, base64Image);
 	}
 
 }

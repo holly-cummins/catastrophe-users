@@ -1,9 +1,11 @@
 package catastrophe.users.jpa;
 
+import java.util.Collection;
+
 public class User {
 	int score;
-
 	String name;
+	Collection<String> base64Image;
 
 	public User() {
 	}

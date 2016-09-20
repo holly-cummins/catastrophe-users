@@ -1,6 +1,8 @@
 package catastrophe.users.jpa;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.annotation.Resource;
 import javax.enterprise.context.ApplicationScoped;
@@ -72,7 +74,7 @@ public class UserManager {
 		saveOrPersist(c);
 	}
 
-	public void updateScore(String userName, int score) {
+	public void updateScore(String userName, int score, String image) {
 		if (userName != null) {
 			EntityManager em = getEm();
 			Person person = em.find(Person.class, userName);
@@ -83,6 +85,14 @@ public class UserManager {
 			}
 
 			person.setScore(person.getScore() + score);
+			Set<String> images = person.getImages();
+			if (images == null) {
+				images = new HashSet<>();
+			}
+			images.add(image);
+			person.setImages(images);
+			System.out.println("Added " + image);
+			System.out.println("length now " + images.size());
 			try {
 				utx.begin();
 				em.merge(person);
