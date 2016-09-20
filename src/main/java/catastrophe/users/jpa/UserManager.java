@@ -17,11 +17,8 @@ public class UserManager {
 	@Resource
 	UserTransaction utx;
 
-	@PersistenceContext(unitName = "catastrophe.auth")
+	@PersistenceContext(unitName = "catastrophe.users")
 	private EntityManager entityManager;
-
-	// @PersistenceUnit(unitName = "catastrophe.auth")
-	// private EntityManagerFactory entityManagerFactory;
 
 	public UserManager() {
 	}
@@ -59,8 +56,8 @@ public class UserManager {
 			return findAll();
 		}
 		filter = filter.toLowerCase();
-		return getEm().createNamedQuery("User.findByName", Person.class)
-				.setParameter("filter", filter + "%").getResultList();
+		return getEm().createNamedQuery("User.findByName", Person.class).setParameter("filter", filter + "%")
+				.getResultList();
 	}
 
 	public void clearAll() {
@@ -96,8 +93,7 @@ public class UserManager {
 			findAll();
 
 		} else {
-			System.err
-					.println("Warning: Trying to add a score to a null user.");
+			System.err.println("Warning: Trying to add a score to a null user.");
 		}
 	}
 
