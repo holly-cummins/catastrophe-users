@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 
 /**
- * Entity implementation class for Entity: User
+ * Entity implementation class for Entity: Artwork
  * 
  */
 @Entity

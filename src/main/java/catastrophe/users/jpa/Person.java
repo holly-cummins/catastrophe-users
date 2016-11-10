@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 /**
- * Entity implementation class for Entity: User
+ * Entity implementation class for Entity: Person
  * 
  */
 @Entity
