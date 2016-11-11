@@ -58,7 +58,7 @@ public class UserManager {
 	}
 
 	public void clearAll() {
-		getEm().createQuery("DELETE FROM User").executeUpdate();
+		getEm().createQuery("DELETE FROM Person").executeUpdate();
 
 	}
 

@@ -41,6 +41,7 @@ Run
 
 The application should be testable on http://localhost:8085/rest/users/leaderboard. 
 
+
 ### Deploying to a single board computer 
 
 Copy `usr/servers/catastrophe-users/local-config/jpa.xml` to `usr/servers/catastrophe-users/`. This sets up 
@@ -62,7 +63,9 @@ To create a war, run `gradle` from the catastrophe-scoring folder.
 This can then be pushed to Bluemix with 
 
     cf push -p build/libs/catastrophe-users.war
+To delete all scores, use the REST endpoint:
 
+    http://catastrophe-users.mybluemix.net/rest/users/clearScores
 # Dependencies 
 
 This sample uses [WebSphere Liberty](http://wasdev.net), Java EE interfaces, Apache Derby (for local running), and the [Liberty Consul Service Discovery sample](https://github.com/WASdev/sample.consulservicediscovery). 
