@@ -42,8 +42,12 @@ public class RestUserManager {
 		}
 	}
 
-	public void clearAll() {
+	@Path("clearScores")
+	@Produces(MediaType.APPLICATION_JSON)
+	@GET
+	public String clearAll() {
 		userManager.clearAll();
+		return "All scores deleted.";
 
 	}
 
