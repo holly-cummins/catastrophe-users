@@ -58,7 +58,14 @@ public class UserManager {
 	}
 
 	public void clearAll() {
-		getEm().createQuery("DELETE FROM Person").executeUpdate();
+		EntityManager em = getEm();
+		try {
+			utx.begin();
+			em.createQuery("DELETE FROM Person").executeUpdate();
+			utx.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 
