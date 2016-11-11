@@ -16,7 +16,7 @@
     <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
     <config updateTrigger='mbean'/>
 
-    <consul.annotation.scanner port="${CONSUL_PORT}" server="http://${CONSUL_HOST}"/>
+    <consul.annotation.scanner port="${env.CONSUL_PORT}" server="http://${env.CONSUL_HOST}"/>
 
 </server>
 
